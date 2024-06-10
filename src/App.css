@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.nav {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.dice-roller {
+  display: flex;
+  flex-direction: column;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
