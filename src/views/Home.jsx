@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import DiceRoller from "./Dice";
-import ListThings from "./ListThings";
+import ListItems from "./ListItems";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <div className="main">
         <DiceRoller />
-        <ListThings />
+        <ListItems />
       </div>
     </div>
   );
