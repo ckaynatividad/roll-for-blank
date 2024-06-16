@@ -10,7 +10,7 @@ export default function DiceRoller({ diceResult, setDiceResult, listItems }) {
   };
   return (
     <div className="dice-roller">
-      <button onClick={handleSubmit}>{diceResult}</button>
+      <button onClick={handleSubmit}>Click to roll</button>
     </div>
   );
 }

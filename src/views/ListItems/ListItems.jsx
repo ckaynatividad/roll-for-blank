@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import List from "../components/List";
-import ListForm from "../components/ListForm";
+import List from "../../components/List";
+import ListForm from "../../components/ListForm";
 
 export default function ListItems({ listItems, setListItems }) {
   const [listItem, setListItem] = useState("");

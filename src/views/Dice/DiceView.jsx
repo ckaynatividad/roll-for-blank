@@ -1,5 +1,5 @@
 import React from "react";
-import DiceCard from "../components/DiceCard";
+import DiceCard from "../../components/DiceCard";
 
 export default function DiceView({ diceResult, setDiceResult, listItems }) {
   return (

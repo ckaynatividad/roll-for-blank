@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Result from "../components/Result";
-import DiceView from "./DiceView";
-import ListItems from "./ListItems";
+import Header from "../../components/Header";
+import Result from "../../components/Result";
+import DiceView from "../Dice/DiceView";
+import ListItems from "../ListItems/ListItems";
 
 export default function Home() {
   const [diceResult, setDiceResult] = useState("Click to roll!");
