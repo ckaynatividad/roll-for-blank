@@ -1,14 +1,16 @@
 import React from "react";
-import DiceForm from "./DiceForm";
 import DiceRoller from "./DiceRoller";
 
-export default function DiceCard() {
+export default function DiceCard({ diceResult, setDiceResult, listItems }) {
   return (
     <div>
-      <p>Click to roll. Already have a roll? </p>
-      {/* <DiceForm /> */}
-      <DiceRoller />
-      <p>Roll again? </p>
+      <p>Dice roll! (4-sided)</p>
+
+      <DiceRoller
+        diceResult={diceResult}
+        setDiceResult={setDiceResult}
+        listItems={listItems}
+      />
     </div>
   );
 }
