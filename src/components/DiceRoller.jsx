@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export default function DiceRoller() {
-  const [diceResult, setDiceResult] = useState("Click to roll");
+export default function DiceRoller({ diceResult, setDiceResult }) {
   const rollDice = (max) => {
     return 1 + Math.floor(Math.random() * max);
   };

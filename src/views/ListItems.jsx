@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import List from "../components/List";
 import ListForm from "../components/ListForm";
 
-export default function ListItems() {
+export default function ListItems({ listItems }) {
   const [listItem, setListItem] = useState("");
-  const [listItems, , setListItems] = useState([]);
 
   return (
     <div>

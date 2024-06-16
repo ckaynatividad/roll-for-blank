@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 
 export default function ListForm({ listItems, listItem, setListItem }) {
+  const [text, setText] = useState(" ");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     listItems.push({
@@ -13,6 +15,7 @@ export default function ListForm({ listItems, listItem, setListItem }) {
   return (
     <div>
       ListForm
+      <p>{text}</p>
       <form>
         <input
           type="text"
