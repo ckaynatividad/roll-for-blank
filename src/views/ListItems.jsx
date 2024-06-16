@@ -4,19 +4,25 @@ import ListForm from "../components/ListForm";
 
 export default function ListItems({ listItems, setListItems }) {
   const [listItem, setListItem] = useState("");
+  const [errText, setErrText] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    listItems.push({
-      id: listItems.length + 1,
-      description: listItem,
-    });
-    setListItem("");
-    setListItems((prev) => [...prev]);
+    if (listItem.length === 0) {
+      setErrText("you must enter something!");
+    } else {
+      setErrText("");
+      listItems.push({
+        id: listItems.length + 1,
+        description: listItem,
+      });
+      setListItem("");
+      setListItems((prev) => [...prev]);
+    }
   };
 
   const handleDelete = async (id) => {
-    listItems.splice(id - 1, 1);
+    listItems.splice(listItems.indexOf(id), 1);
     setListItems((prev) => [...prev]);
   };
 
@@ -25,6 +31,7 @@ export default function ListItems({ listItems, setListItems }) {
       <ol>
         <h2>Your list</h2>
         <List listItems={listItems} handleDelete={handleDelete} />
+        {errText}
         {listItems.length === 4 ? (
           ""
         ) : (

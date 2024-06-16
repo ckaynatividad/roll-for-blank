@@ -7,6 +7,10 @@ export default function Result({
   listItems,
   setListItems,
 }) {
+  const [resultText, setResultText] = useState(
+    diceResult + "." + " " + listItems[diceResult - 1].description
+  );
+
   const handleReset = async (e) => {
     e.preventDefault();
     setDiceResult("Click to roll!");
@@ -15,9 +19,7 @@ export default function Result({
     <div>
       <p>The dice roll was: {diceResult}</p>
       <p>
-        {listItems.length >= 4 && diceResult != "Click to roll!"
-          ? diceResult + "." + " " + listItems[diceResult - 1].description
-          : "none"}
+        {listItems.length === 4 && diceResult != "Click to roll!" && resultText}
       </p>
       <button onClick={handleReset}>roll again</button>
     </div>
