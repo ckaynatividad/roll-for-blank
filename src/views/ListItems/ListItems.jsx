@@ -9,7 +9,7 @@ export default function ListItems({ listItems, setListItems }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (listItem.length === 0) {
-      setErrText("you must enter something!");
+      setErrText("You must enter something!");
     } else {
       setErrText("");
       listItems.push({
@@ -29,7 +29,7 @@ export default function ListItems({ listItems, setListItems }) {
   return (
     <div>
       <ol>
-        <h2>Your list</h2>
+        <h2>Your List</h2>
         <List listItems={listItems} handleDelete={handleDelete} />
         {errText}
         {listItems.length === 4 ? (

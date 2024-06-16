@@ -4,7 +4,7 @@ import DiceRoller from "./DiceRoller";
 export default function DiceCard({ diceResult, setDiceResult, listItems }) {
   return (
     <div>
-      <p>Click to roll.</p>
+      <p>Dice roll! (4-sided)</p>
 
       <DiceRoller
         diceResult={diceResult}

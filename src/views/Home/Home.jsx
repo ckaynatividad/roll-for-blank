@@ -5,16 +5,16 @@ import DiceView from "../Dice/DiceView";
 import ListItems from "../ListItems/ListItems";
 
 export default function Home() {
-  const [diceResult, setDiceResult] = useState("Click to roll!");
+  const [diceResult, setDiceResult] = useState(0);
   const [listItems, setListItems] = useState([]);
-  const [text, setText] = useState("please set up four things on your list");
+  const [text, setText] = useState("Please set up four things on your list!");
 
   return (
     <div className="home">
       <Header />
       <div>
         <div className="main">
-          {diceResult != "Click to roll!" && listItems.length >= 4 ? (
+          {diceResult != 0 && listItems.length >= 4 ? (
             <Result
               diceResult={diceResult}
               setDiceResult={setDiceResult}
