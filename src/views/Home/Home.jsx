@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <div>
         <div className="main">
-          {diceResult != 0 && listItems.length >= 4 ? (
+          {diceResult !== 0 && listItems.length >= 4 ? (
             <Result
               diceResult={diceResult}
               setDiceResult={setDiceResult}

@@ -13,7 +13,7 @@ export default function Result({ diceResult, setDiceResult, listItems }) {
   return (
     <div>
       <p>The dice roll was: {diceResult}!</p>
-      <p>{listItems.length === 4 && diceResult != 0 && resultText}</p>
+      <p>{listItems.length === 4 && diceResult !== 0 && resultText}</p>
       <button onClick={handleReset}>Roll again?</button>
     </div>
   );

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function DiceRoller({ diceResult, setDiceResult, listItems }) {
+export default function DiceRoller({ setDiceResult }) {
   const rollDice = (max) => {
     return 1 + Math.floor(Math.random() * max);
   };

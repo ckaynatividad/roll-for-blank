@@ -6,11 +6,7 @@ export default function DiceCard({ diceResult, setDiceResult, listItems }) {
     <div>
       <p>Dice roll! (4-sided)</p>
 
-      <DiceRoller
-        diceResult={diceResult}
-        setDiceResult={setDiceResult}
-        listItems={listItems}
-      />
+      <DiceRoller setDiceResult={setDiceResult} />
     </div>
   );
 }
